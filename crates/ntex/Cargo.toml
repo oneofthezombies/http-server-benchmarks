@@ -1,6 +1,6 @@
 [package]
-name = "ntex"
+name = "bench-ntex"
 edition.workspace = true
 
 [dependencies]
-ntex.workspace = true
+ntex = { version = "2.10.0", features = ["tokio"] }
