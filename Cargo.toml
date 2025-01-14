@@ -7,3 +7,6 @@ repository = "https://github.com/oneofthezombies/http-server-benchmarks"
 license = "MIT"
 edition = "2021"
 authors = ["oneofthezombies <hunhoekim@gmail.com>"]
+
+[workspace.dependencies]
+ntex = { version = "2.10.0", features = ["tokio"] }
