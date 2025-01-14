@@ -12,6 +12,11 @@ async fn main() -> std::io::Result<()> {
     let port: u16 = env::var("PORT").unwrap().parse().unwrap();
     web::HttpServer::new(|| web::App::new().service(hello))
         .bind(("127.0.0.1", port))?
+        .backlog(2048)
+        .workers(8)
+        .maxconn(25_000)
+        .maxconnrate(256)
+        .keep_alive(5)
         .run()
         .await
 }

@@ -12,6 +12,7 @@ RUN apt update && \
     apt install -y \
         git \
         xdg-utils \
+        wrk \
         fish && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*
