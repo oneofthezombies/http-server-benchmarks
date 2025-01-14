@@ -1,0 +1,9 @@
+[package]
+name = "hyper_server"
+edition.workspace = true
+
+[dependencies]
+http-body-util = "0.1.2"
+hyper = { version = "1.5.2", features = ["server"] }
+hyper-util = { version = "0.1.10", features = ["full"] }
+tokio = { version = "1.43.0", features = ["full"] }

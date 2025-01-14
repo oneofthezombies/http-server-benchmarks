@@ -1,10 +1,11 @@
 [package]
-name = "bench_custom"
+name = "custom_server"
 edition.workspace = true
 
 [dependencies]
 http-body-util = "0.1.2"
 hyper = { version = "1.5.2", features = ["server"] }
 hyper-util = { version = "0.1.10", features = ["full"] }
+mimalloc = "0.1.43"
 socket2 = "0.5.8"
 tokio = { version = "1.43.0", features = ["full"] }

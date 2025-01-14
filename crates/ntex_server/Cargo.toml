@@ -1,5 +1,5 @@
 [package]
-name = "bench_ntex"
+name = "ntex_server"
 edition.workspace = true
 
 [dependencies]
