@@ -1,0 +1,3 @@
+[package]
+name = "ntex"
+edition.workspace = true

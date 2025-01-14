@@ -6,5 +6,5 @@
     ".devcontainer/Dockerfile",
     ".devcontainer/devcontainer.json"
   ],
-  "words": []
+  "words": ["ntex"]
 }

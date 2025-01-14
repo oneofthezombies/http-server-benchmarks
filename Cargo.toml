@@ -1,0 +1,9 @@
+[workspace]
+resolver = "2"
+members = ["crates/ntex", "crates/custom"]
+
+[workspace.package]
+repository = "https://github.com/oneofthezombies/http-server-benchmarks"
+license = "MIT"
+edition = "2021"
+authors = ["oneofthezombies <hunhoekim@gmail.com>"]
