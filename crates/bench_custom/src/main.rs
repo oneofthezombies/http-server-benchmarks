@@ -24,12 +24,12 @@ async fn hello(_: Request<hyper::body::Incoming>) -> Result<Response<Full<Bytes>
 
 fn main() {
     let port: u16 = env::var("PORT").unwrap().parse().unwrap();
-    let worker_count: usize = 1;
+    let thread_count: usize = 8;
     let backlog: i32 = 2048;
 
     let addr = SocketAddr::from(([127, 0, 0, 1], port));
-    (0..worker_count)
-        .fold(Vec::with_capacity(worker_count), |mut acc, _| {
+    (0..thread_count)
+        .fold(Vec::with_capacity(thread_count), |mut acc, _| {
             let worker = thread::spawn(move || {
                 let socket = Socket::new(Domain::IPV4, Type::STREAM, Some(Protocol::TCP)).unwrap();
                 socket.set_reuse_port(true).unwrap();
@@ -48,6 +48,7 @@ fn main() {
                             local
                                 .spawn_local(async move {
                                     http1::Builder::new()
+                                        .keep_alive(true)
                                         .serve_connection(io, service_fn(hello))
                                         .await
                                         .unwrap();
