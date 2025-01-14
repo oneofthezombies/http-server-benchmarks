@@ -8,7 +8,8 @@
         "streetsidesoftware.code-spell-checker",
         "tamasfe.even-better-toml",
         "Thinker.sort-json",
-        "usernamehw.errorlens"
+        "usernamehw.errorlens",
+        "vadimcn.vscode-lldb"
       ],
       "settings": {
         "[json]": {

@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["crates/ntex", "crates/custom"]
+members = ["crates/bench_ntex", "crates/bench_custom"]
 
 [workspace.package]
 repository = "https://github.com/oneofthezombies/http-server-benchmarks"
