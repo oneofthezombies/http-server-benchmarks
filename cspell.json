@@ -1,0 +1,10 @@
+{
+  "enabledFileTypes": {
+    "rust": true
+  },
+  "ignorePaths": [
+    ".devcontainer/Dockerfile",
+    ".devcontainer/devcontainer.json"
+  ],
+  "words": []
+}
