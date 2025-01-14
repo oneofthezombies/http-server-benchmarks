@@ -38,7 +38,8 @@
           "imports_granularity=Item",
           "--config",
           "group_imports=StdExternalCrate"
-        ]
+        ],
+        "terminal.integrated.defaultProfile.linux": "fish"
       }
     }
   },
